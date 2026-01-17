@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Design System: Brutalist Creative
+  Dark, moody palette with retro-futuristic vibes
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 60 9% 94%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 60 9% 94%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 60 9% 94%;
+
+    --primary: 60 9% 94%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 60 9% 94%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 72% 51%;
+    --accent-foreground: 60 9% 94%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 60 9% 94%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 72% 51%;
+
+    --radius: 0rem;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 60 9% 94%;
+    --sidebar-primary: 0 72% 51%;
+    --sidebar-primary-foreground: 60 9% 94%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 60 9% 94%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 72% 51%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 60 9% 94%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 60 9% 94%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 60 9% 94%;
+
+    --primary: 60 9% 94%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 60 9% 94%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 72% 51%;
+    --accent-foreground: 60 9% 94%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 60 9% 94%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 72% 51%;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 60 9% 94%;
+    --sidebar-primary: 0 72% 51%;
+    --sidebar-primary-foreground: 60 9% 94%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 60 9% 94%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 72% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .hero-title {
+    @apply text-6xl md:text-8xl lg:text-[10rem] font-display font-bold leading-[0.85] tracking-tighter;
+  }
+
+  .hero-subtitle {
+    @apply text-lg md:text-xl font-mono text-muted-foreground uppercase tracking-widest;
+  }
+
+  .nav-link {
+    @apply font-mono text-sm uppercase tracking-wider text-muted-foreground 
+           hover:text-foreground transition-colors duration-300;
+  }
+
+  .cta-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background 
+           font-mono text-sm uppercase tracking-wider
+           hover:bg-accent hover:text-accent-foreground transition-all duration-300;
+  }
+
+  .cta-outline {
+    @apply inline-flex items-center gap-2 px-8 py-4 border border-foreground/30 
+           font-mono text-sm uppercase tracking-wider text-foreground
+           hover:border-foreground hover:bg-foreground/5 transition-all duration-300;
+  }
+
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground;
+  }
+
+  .card-brutalist {
+    @apply bg-card border border-border p-6 md:p-8 
+           hover:border-foreground/30 transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-mask {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+}
