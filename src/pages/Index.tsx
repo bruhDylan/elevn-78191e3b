@@ -305,7 +305,7 @@ const Index = () => {
               <div className="aspect-[4/3] bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30 flex items-center justify-center overflow-hidden">
                 {/* Image fills the entire box */}
                 <img 
-                  src="public/Gemini_Generated_Image_eaymf2eaymf2eaym.png" 
+                  src="/Gemini_Generated_Image_eaymf2eaymf2eaym.png" 
                   alt="Team Member" 
                   className="w-full h-full object-cover"
                   style={{ objectPosition: "top 30% left 60%" }}
